@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import "./hero.css";
-// padding to sections md:pl-28 md:pr-28 p-4
+// padding to se+ctions md:pl-28 md:pr-28 p-4
 const HeroMain = () => {
     const [width, setWidth] = useState("0%")
     const toggle = () => {
@@ -96,7 +96,7 @@ const HeroMain = () => {
                                 <span className="features_span_app md:text-3xl text-2xl">App Development</span>
                                 <div className="helping_span_features flex flex-col items-center">
                                     <span>Helping families live intelligently</span>
-                                    <span>means we're always working to</span>
+                                    <span>{"means we're always working to"}</span>
                                     <span> bring our customers.</span>
                                 </div>
                             </div>
@@ -109,7 +109,7 @@ const HeroMain = () => {
                                 <span className="features_span_app md:text-3xl text-2xl">App Development</span>
                                 <div className="helping_span_features flex flex-col items-center">
                                     <span>Helping families live intelligently</span>
-                                    <span>means we're always working to</span>
+                                    <span>{"means we're always working to"}</span>
                                     <span> bring our customers.</span>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@ const HeroMain = () => {
                                 <span className="features_span_app md:text-3xl text-2xl">App Development</span>
                                 <div className="helping_span_features flex flex-col items-center">
                                     <span>Helping families live intelligently</span>
-                                    <span>means we're always working to</span>
+                                    <span>{"means we're always working to"}</span>
                                     <span> bring our customers.</span>
                                 </div>
                             </div>
@@ -131,9 +131,9 @@ const HeroMain = () => {
                 </div>
                 <div className="about">
                     <div className="aboutWrapper flex lg:flex-row  flex-col-reverse   gap-8 md:pl-28 md:pr-28 md:p-8 md:pt-28 pl-6 pr-6 p-4">
-                        <div className="flex flex-1 gap-4 relative">
+                        <div className="flex items-center flex-1 gap-4 relative">
                             <img
-                                className="pb-8"
+                                className="pb-8 sm:block hidden"
                                 src="/images/about/Rectangle 2.png"
                                 alt=""
                             />
@@ -176,7 +176,7 @@ const HeroMain = () => {
                                     <span>There are many variations of passages of Lorem</span>
                                     <span>Ipsum available, but the majority have suffered </span>
                                     <span>alteration in some form, by injected humour, or</span>
-                                    <span>randomised words which don't look even slightly</span>
+                                    <span>{"randomised words which don't look even slightly"}</span>
                                     <span>believable. If you are going</span>
                                 </div>
                             </div>
@@ -186,7 +186,7 @@ const HeroMain = () => {
                                     <span>There are many variations of passages of Lorem</span>
                                     <span>Ipsum available, but the majority have suffered </span>
                                     <span>alteration in some form, by injected humour, or</span>
-                                    <span>randomised words which don't look even slightly</span>
+                                    <span>{"randomised words which don't look even slightly"}</span>
                                     <span>believable. If you are going</span>
                                 </div>
                             </div>
@@ -204,7 +204,7 @@ const HeroMain = () => {
                             <span className="who_we_are_span">Who We Are</span>
                             <div className="flex  flex-col have_a_project md:text-5xl text-3xl">
                                 <span>Have A Project In Mind?</span>
-                                <span>Let's Get To Work.</span>
+                                <span>{"Let's Get To Work."}</span>
                             </div>
                             <div className="flex flex-col sed_ut">
                                 <span>Sed ut perspiciatis unde omnis iste natus sit voluptatem </span>
@@ -222,7 +222,7 @@ const HeroMain = () => {
                 <div className="latest_projects">
                     <div className="latest_projects_wrapper flex flex-col md:gap-12 pb-14 gap-4 md:pb-28 md:pt-28 pt-14 justify-center items-center">
                         <span className="our_projects">Latest Project & Case</span>
-                        <span className="global_projects md:text-5xl text-3xl">Let's Looks Our Global Projects</span>
+                        <span className="global_projects md:text-5xl text-3xl">{"Let's Looks Our Global Projects"}</span>
                         <div className="flex items-center gap-8">
                             <div className="amazing_div3 flex-1 md:gap-8  hidden md:flex pb-8 p-4 items-start justify-end gap-4 flex-col">
                                 <span className="technical1">Technical Analysis</span>
@@ -262,7 +262,7 @@ const HeroMain = () => {
                 <div className="background h-96 object-center flex items-center bg-no-repeat">
                     <div className="background_wrapper flex md:pl-28 md:pr-28 md:gap-48 md:p-4 pl-6 pr-6 items-center justify-between">
                         <div className="flex flex-col md:text-5xl text-xl get_free">
-                            <span>Get Free Consultations! We're</span>
+                            <span>{"Get Free Consultations! We're"}</span>
                             <span>Ready to Work Together</span>
                         </div>
                         <div>
