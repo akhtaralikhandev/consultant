@@ -1,7 +1,16 @@
+"use client"
+import { useState } from "react";
 import "./hero.css";
-
 // padding to sections md:pl-28 md:pr-28 p-4
 const HeroMain = () => {
+    const [width, setWidth] = useState("0%")
+    const toggle = () => {
+        if (width === "100%") {
+            setWidth("0%")
+        } else {
+            setWidth("100%")
+        }
+    }
     return (
         <div className="heroMain">
             <div className="heroMainWarpper">
@@ -24,15 +33,28 @@ const HeroMain = () => {
                                 Contact us today
                             </button>
                         </div>
-                        <span className="lg:hidden block">
+                        <span onClick={() => toggle()} className="lg:hidden block cursor-pointer">
                             <i className="fa fa-bars" aria-hidden="true"></i>
                         </span>
+                        <div style={{ width: width }} className={`lg:hidden justify-end   resp_nav top-0 right-0 absolute flex `}>
+                            <ul className="flex pl-8 p-4 flex-col  gap-2">
+                                <li className="text-white cursor-pointer">Home</li>
+                                <li className="text-white cursor-pointer">About</li>
+                                <li className="text-white cursor-pointer">Services</li>
+                                <li className="text-white cursor-pointer">Resources</li>
+                                <li className="text-white cursor-pointer">Projects</li>
+                                <button className="navbar_right_button rounded-md md:pl-5 md:pr-5 p-2">
+                                    Contact us today
+                                </button>
+                                <li onClick={() => toggle()} className={`absolute left-4 top-4 cursor-pointer`}>close</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div className="heroMainSection">
                     <div className="heroMainSectionWrapper flex items-center justify-between md:pl-28 md:pr-28 md:p-8 md:pt-28 pl-6 pr-6 p-4">
                         <div className=" flex flex-1 flex-col gap-8">
-                            <div className="flex flex-col heroMainLeft">
+                            <div className="flex flex-col xl:text-6xl lg:text-4xl md:text-3xl text-2xl heroMainLeft">
                                 <span>
                                     Our <span className="consultation_span">consultation</span> is
                                 </span>
@@ -46,7 +68,7 @@ const HeroMain = () => {
                                 <span>luctus nam elit sociis luctus et aliquam libero.</span>
                             </div>
                             <div>
-                                <button className="our_services_button pl-4 pr-4 p-3 rounded-lg">
+                                <button className="our_services_button md:text-xl text-sm pl-4 pr-4 p-3 rounded-lg">
                                     Our Services
                                 </button>
                             </div>
@@ -57,50 +79,50 @@ const HeroMain = () => {
                     </div>
                 </div>
                 <div className="feature">
-                    <div className="featureWrapper flex flex-col items-center md:gap-28 gap-4 md:pl-28 md:pr-28 md:p-8 md:pt-28 pl-6 pr-6 p-4">
+                    <div className="featureWrapper flex flex-col items-center md:gap-28 gap-8 md:pl-28 md:pr-28 md:p-8 md:pt-28 pl-6 pr-6 p-4">
                         <div className="flex flex-col items-center justify-center md:gap-6 gap-2">
-                            <span className="care_feature_span">CARE FEATURES</span>
-                            <span className="awesome_services">
+                            <span className="care_feature_span md:text-2xl text-lg">CARE FEATURES</span>
+                            <span className="awesome_services md:text-5xl text-2xl">
                                 Awesome Service With Our Tools
                             </span>
                         </div>
-                        <div className="flex items-center md:gap-28 gap-4">
-                            <div className="flex items-center flex-col md:gap-6 gap-2">
+                        <div className="flex items-center lg:flex-row flex-col md:gap-28 gap-4">
+                            <div className="flex items-center flex-col md:gap-6 gap-4">
                                 <img
                                     className="features_div_image"
                                     src="/images/features/image 2.png"
                                     alt=""
                                 />
-                                <span className="features_span_app">App Development</span>
+                                <span className="features_span_app md:text-3xl text-2xl">App Development</span>
                                 <div className="helping_span_features flex flex-col items-center">
                                     <span>Helping families live intelligently</span>
-                                    <span>means we’re always working to</span>
+                                    <span>means we're always working to</span>
                                     <span> bring our customers.</span>
                                 </div>
                             </div>
-                            <div className="flex flex-col items-center md:gap-6 gap-2">
+                            <div className="flex flex-col items-center md:gap-6 gap-4">
                                 <img
                                     className="features_div_image"
                                     src="/images/features/image 3.png"
                                     alt=""
                                 />
-                                <span className="features_span_app">App Development</span>
+                                <span className="features_span_app md:text-3xl text-2xl">App Development</span>
                                 <div className="helping_span_features flex flex-col items-center">
                                     <span>Helping families live intelligently</span>
-                                    <span>means we’re always working to</span>
+                                    <span>means we're always working to</span>
                                     <span> bring our customers.</span>
                                 </div>
                             </div>
-                            <div className="flex items-center flex-col md:gap-6 gap-2">
+                            <div className="flex items-center flex-col md:gap-6 gap-4">
                                 <img
                                     className="features_div_image"
                                     src="/images/features/image 4.png"
                                     alt=""
                                 />
-                                <span className="features_span_app">App Development</span>
+                                <span className="features_span_app md:text-3xl text-2xl">App Development</span>
                                 <div className="helping_span_features flex flex-col items-center">
                                     <span>Helping families live intelligently</span>
-                                    <span>means we’re always working to</span>
+                                    <span>means we're always working to</span>
                                     <span> bring our customers.</span>
                                 </div>
                             </div>
@@ -108,7 +130,7 @@ const HeroMain = () => {
                     </div>
                 </div>
                 <div className="about">
-                    <div className="aboutWrapper flex   gap-8 md:pl-28 md:pr-28 md:p-8 md:pt-28 pl-6 pr-6 p-4">
+                    <div className="aboutWrapper flex lg:flex-row  flex-col-reverse   gap-8 md:pl-28 md:pr-28 md:p-8 md:pt-28 pl-6 pr-6 p-4">
                         <div className="flex flex-1 gap-4 relative">
                             <img
                                 className="pb-8"
@@ -122,9 +144,9 @@ const HeroMain = () => {
                             />
                             <img src="/images/about/Rectangle 3.png" alt="" />
                         </div>
-                        <div className="flex flex-1 flex-col  items-start md:gap-8 gap-4 ">
+                        <div className="flex flex-1 flex-col  items-center lg:items-start md:gap-8 gap-4 ">
                             <span className="about_span">About</span>
-                            <div className="influencer flex flex-col">
+                            <div className="influencer md:text-5xl text-2xl flex flex-col">
                                 <span>Influencer Marketing</span>
                                 <span>for Your Business</span>
                             </div>
@@ -146,9 +168,9 @@ const HeroMain = () => {
                 <div className="amazing">
                     <div className="amazingWrapper flex flex-col items-center justify-center md:gap-8 gap-4 md:pl-28 md:pr-28 p-8 md:pt-28 pl-6 pr-6 md:p-24">
                         <span className="amazing_span">Our Services</span>
-                        <span className="amazing_spann">Amazing Business Services</span>
+                        <span className="amazing_spann md:text-5xl text-2xl ">Amazing Business Services</span>
                         <div className="flex items-center gap-8">
-                            <div className="amazing_div1 flex pb-8 p-4 items-start justify-end gap-4 flex-col">
+                            <div className="amazing_div1 h-72 flex pb-8 p-4 items-start justify-end gap-4 flex-col">
                                 <span className="technical">Technical Analysis</span>
                                 <div className="technical_div">
                                     <span>There are many variations of passages of Lorem</span>
@@ -158,7 +180,7 @@ const HeroMain = () => {
                                     <span>believable. If you are going</span>
                                 </div>
                             </div>
-                            <div className="amazing_div2 flex pb-8 p-4 items-start justify-end gap-4 flex-col">
+                            <div className="amazing_div2 hidden h-72  md:flex pb-8 p-4 items-start justify-end gap-4 flex-col">
                                 <span className="technical">Technical Analysis</span>
                                 <div className="technical_div">
                                     <span>There are many variations of passages of Lorem</span>
@@ -172,17 +194,17 @@ const HeroMain = () => {
                     </div>
                 </div>
                 <div className="who_are_we flex items-center justify-center">
-                    <div className="who_wrapper flex items-start md:gap-24 gap-8 justify-center md:pl-28 md:pr-2 md:pt-24  p-8">
+                    <div className="who_wrapper md:flex-row flex-col-reverse flex items-start md:gap-24 gap-8 justify-center md:pl-28 md:pr-2 md:pt-24  p-8">
                         <div className="relative flex-1">
                             <img src="/images/who/image.png" alt="" />
                             <img className="absolute  -bottom-14 right-0" src="/images/who/image 3.png" alt="" />
                             <img className="absolute top-0" src="/images/who/Abstract.png" alt="" />
                         </div>
-                        <div className="flex-1 flex flex-col md:gap-8 gap-4">
+                        <div className="flex-1 md:items-start items-center flex flex-col md:gap-8 gap-4">
                             <span className="who_we_are_span">Who We Are</span>
-                            <div className="flex flex-col have_a_project">
+                            <div className="flex  flex-col have_a_project md:text-5xl text-3xl">
                                 <span>Have A Project In Mind?</span>
-                                <span>Let’s Get To Work.</span>
+                                <span>Let's Get To Work.</span>
                             </div>
                             <div className="flex flex-col sed_ut">
                                 <span>Sed ut perspiciatis unde omnis iste natus sit voluptatem </span>
@@ -198,11 +220,11 @@ const HeroMain = () => {
                     </div>
                 </div>
                 <div className="latest_projects">
-                    <div className="latest_projects_wrapper flex flex-col md:gap-12 gap-4 md:pb-28 md:pt-28 justify-center items-center">
+                    <div className="latest_projects_wrapper flex flex-col md:gap-12 pb-14 gap-4 md:pb-28 md:pt-28 pt-14 justify-center items-center">
                         <span className="our_projects">Latest Project & Case</span>
-                        <span className="global_projects">Let’s Looks Our Global Projects</span>
+                        <span className="global_projects md:text-5xl text-3xl">Let's Looks Our Global Projects</span>
                         <div className="flex items-center gap-8">
-                            <div className="amazing_div3 flex-1 md:gap-8  flex pb-8 p-4 items-start justify-end gap-4 flex-col">
+                            <div className="amazing_div3 flex-1 md:gap-8  hidden md:flex pb-8 p-4 items-start justify-end gap-4 flex-col">
                                 <span className="technical1">Technical Analysis</span>
                                 <div className="technical_div">
                                     <span>There are many variations of passages of Lorem</span>
@@ -210,7 +232,7 @@ const HeroMain = () => {
 
                                 </div>
                             </div>
-                            <div className="amazing_div3 flex-1 flex pb-8 p-4 items-start justify-end gap-4 flex-col">
+                            <div className="amazing_div3 flex-1 hidden md:flex pb-8 p-4 items-start justify-end gap-4 flex-col">
                                 <span className="technical1">Technical Analysis</span>
                                 <div className="technical_div">
                                     <span>There are many variations of passages of Lorem</span>
@@ -218,7 +240,7 @@ const HeroMain = () => {
 
                                 </div>
                             </div>
-                            <div className="amazing_div3 flex-1 flex pb-8 p-4 items-start justify-end gap-4 flex-col">
+                            <div className="amazing_div3 flex-1 hidden md:flex-wrap flex-nowrap lg:flex pb-8 p-4 items-start justify-end gap-4 flex-col">
                                 <span className="technical1">Technical Analysis</span>
                                 <div className="technical_div">
                                     <span>There are many variations of passages of Lorem</span>
@@ -239,28 +261,28 @@ const HeroMain = () => {
                 </div>
                 <div className="background h-96 object-center flex items-center bg-no-repeat">
                     <div className="background_wrapper flex md:pl-28 md:pr-28 md:gap-48 md:p-4 pl-6 pr-6 items-center justify-between">
-                        <div className="flex flex-col get_free">
-                            <span>Get Free Consultations! We’re</span>
+                        <div className="flex flex-col md:text-5xl text-xl get_free">
+                            <span>Get Free Consultations! We're</span>
                             <span>Ready to Work Together</span>
                         </div>
                         <div>
-                            <button className="get_free_consultation_button">Get Free Consultations</button>
+                            <button className="get_free_consultation_button md:text-2xl text-sm md:h-24 h-12">Get Free Consultations</button>
                         </div>
                     </div>
                 </div>
                 <div className="team">
-                    <div className="teamWrapper flex flex-col items-center justify-center md:p-28 md:pl-28 md:pr-28 md:gap-24  pl-6 pr-6">
-                        <div className="flex flex-col items-center gap-8 justify-center">
+                    <div className="teamWrapper flex flex-col items-center justify-center md:p-28 md:pl-28 md:pr-28 md:gap-24 p-6  pl-6 pr-6">
+                        <div className="flex flex-col items-center gap-4 md:gap-8 justify-center">
                             <span className="meet_our">Meet Our Team</span>
-                            <span className="experience">Experience Team Members</span>
+                            <span className="experience md:text-5xl text-2xl">Experience Team Members</span>
                         </div>
                         <div className="flex items-center  justify-center md:gap-8">
-                            <div className="flex flex-col gap-4">
+                            <div className="md:flex hidden flex-col gap-4">
                                 <img src="/images/team/image.png" alt="" />
                                 <span className="span_name">Robert C. Simmons</span>
                                 <span className="consultant">Business Consultant</span>
                             </div>
-                            <div className="flex flex-col gap-4">
+                            <div className="md:flex hidden flex-col gap-4">
                                 <img src="/images/team/image 2.png" alt="" />
                                 <span className="span_name">Christopher L. Wagner</span>
                                 <span className="consultant">Senior Manager</span>
@@ -276,9 +298,9 @@ const HeroMain = () => {
                 </div>
                 <div className="newsLetter">
                     <div className="newLetterWrapper md:p-28 ">
-                        <div className="newsContainer md:p-28 flex justify-between items-center">
-                            <div className="flex flex-col gap-8">
-                                <div className="flex flex-col subscribe_span">
+                        <div className="newsContainer md:p-28  p-4 flex justify-between items-center">
+                            <div className="flex flex-1 flex-col gap-4 md:gap-8">
+                                <div className="flex flex-col md:text-4xl text-sm subscribe_span">
                                     <span>Subscribe to Our Newsletter For</span>
                                     <span>Weekly Article Update.</span>
                                 </div>
@@ -287,15 +309,15 @@ const HeroMain = () => {
                                     <span>alteration, by injected words.</span>
                                 </div>
                             </div>
-                            <div>
-                                <button className="getStarted">Get Started</button>
+                            <div className="flex-1 flex items-center  justify-center">
+                                <button className="getStarted  md:text-xl text-sm md:pl-5 md:pr-5 md:p-2 p-2  ">Get Started</button>
                             </div>
                         </div>
 
                     </div>
                 </div>
                 <div className="footer">
-                    <div className="footerWrapper flex items-center justify-center md:gap-28  md:pl-28 md:pr-28 md:p-8 md:pt-28 pl-6 pr-6 p-4">
+                    <div className="footerWrapper  flex items-center justify-center md:gap-28  md:pl-28 md:pr-28 md:p-8 md:pt-28 pl-6 pr-6 p-4">
                         <div className="flex flex-col gap-8">
                             <img
                                 src="/images/footer/logo.png"
