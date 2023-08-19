@@ -54,7 +54,7 @@ const HeroMain = () => {
                 <div className="heroMainSection">
                     <div className="heroMainSectionWrapper flex items-center justify-between md:pl-28 md:pr-28 md:p-8 md:pt-28 pl-6 pr-6 p-4">
                         <div className=" flex flex-1 flex-col gap-8">
-                            <div className="flex flex-col xl:text-6xl lg:text-4xl md:text-3xl text-2xl heroMainLeft">
+                            <div className="flex flex-col xl:text-6xl lg:text-4xl md:text-3xl text-sm sm:text-xl heroMainLeft">
                                 <span>
                                     Our <span className="consultation_span">consultation</span> is
                                 </span>
@@ -73,7 +73,7 @@ const HeroMain = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="heroMainRight flex-1">
+                        <div className="heroMainRight md:block hidden flex-1">
                             <img src="/images/hero/profile1.png" alt="" />
                         </div>
                     </div>
@@ -81,8 +81,8 @@ const HeroMain = () => {
                 <div className="feature">
                     <div className="featureWrapper flex flex-col items-center md:gap-28 gap-8 md:pl-28 md:pr-28 md:p-8 md:pt-28 pl-6 pr-6 p-4">
                         <div className="flex flex-col items-center justify-center md:gap-6 gap-2">
-                            <span className="care_feature_span md:text-2xl text-lg">CARE FEATURES</span>
-                            <span className="awesome_services md:text-5xl text-2xl">
+                            <span className="care_feature_span md:text-2xl sm:text-lg text-sm">CARE FEATURES</span>
+                            <span className="awesome_services md:text-5xl text-xl sm:text-2xl">
                                 Awesome Service With Our Tools
                             </span>
                         </div>
@@ -93,8 +93,8 @@ const HeroMain = () => {
                                     src="/images/features/image 2.png"
                                     alt=""
                                 />
-                                <span className="features_span_app md:text-3xl text-2xl">App Development</span>
-                                <div className="helping_span_features flex flex-col items-center">
+                                <span className="features_span_app md:text-3xl text-lg sm:text-2xl">App Development</span>
+                                <div className="helping_span_features md:text-xl  sm:text-sm flex flex-col items-center">
                                     <span>Helping families live intelligently</span>
                                     <span>{"means we're always working to"}</span>
                                     <span> bring our customers.</span>
@@ -106,8 +106,8 @@ const HeroMain = () => {
                                     src="/images/features/image 3.png"
                                     alt=""
                                 />
-                                <span className="features_span_app md:text-3xl text-2xl">App Development</span>
-                                <div className="helping_span_features flex flex-col items-center">
+                                <span className="features_span_app md:text-3xl text-lg sm:text-2xl">App Development</span>
+                                <div className="helping_span_features flex md:text-xl sm:text-sm flex-col items-center">
                                     <span>Helping families live intelligently</span>
                                     <span>{"means we're always working to"}</span>
                                     <span> bring our customers.</span>
@@ -119,7 +119,7 @@ const HeroMain = () => {
                                     src="/images/features/image 4.png"
                                     alt=""
                                 />
-                                <span className="features_span_app md:text-3xl text-2xl">App Development</span>
+                                <span className="features_span_app md:text-3xl text-lg">App Development</span>
                                 <div className="helping_span_features flex flex-col items-center">
                                     <span>Helping families live intelligently</span>
                                     <span>{"means we're always working to"}</span>
@@ -146,7 +146,7 @@ const HeroMain = () => {
                         </div>
                         <div className="flex flex-1 flex-col  items-center lg:items-start md:gap-8 gap-4 ">
                             <span className="about_span">About</span>
-                            <div className="influencer md:text-5xl text-2xl flex flex-col">
+                            <div className="influencer md:text-5xl text-xl flex flex-col">
                                 <span>Influencer Marketing</span>
                                 <span>for Your Business</span>
                             </div>
@@ -201,8 +201,8 @@ const HeroMain = () => {
                             <img className="absolute top-0" src="/images/who/Abstract.png" alt="" />
                         </div>
                         <div className="flex-1 md:items-start items-center flex flex-col md:gap-8 gap-4">
-                            <span className="who_we_are_span">Who We Are</span>
-                            <div className="flex  flex-col have_a_project md:text-5xl text-3xl">
+                            <span className="who_we_are_span md:text-3xl text-sm">Who We Are</span>
+                            <div className="flex  flex-col have_a_project md:text-5xl text-xl">
                                 <span>Have A Project In Mind?</span>
                                 <span>{"Let's Get To Work."}</span>
                             </div>
