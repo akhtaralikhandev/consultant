@@ -193,7 +193,7 @@ const HeroMain = () => {
                         </span>
                         <div className="flex items-center gap-8">
                             <div className="amazing_div1 h-72 flex pb-8 p-4 items-start justify-end gap-4 flex-col">
-                                <span className="technical">Technical Analysis</span>
+                                <span className="technical md:text-3xl text-xl">Technical Analysis</span>
                                 <div className="technical_div">
                                     <span>There are many variations of passages of Lorem</span>
                                     <span>Ipsum available, but the majority have suffered </span>
