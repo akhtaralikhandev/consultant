@@ -66,7 +66,7 @@ const HeroMain = () => {
                 <div className="heroMainSection">
                     <div className="heroMainSectionWrapper flex items-center justify-between md:pl-28 md:pr-28 md:p-8 md:pt-28 pl-6 pr-6 p-4">
                         <div className=" flex flex-1 flex-col gap-8">
-                            <div className="flex flex-col xl:text-6xl lg:text-4xl md:text-3xl text-sm sm:text-xl heroMainLeft">
+                            <div className="flex flex-col xl:text-6xl lg:text-4xl md:text-3xl text-xl sm:text-xl heroMainLeft">
                                 <span>
                                     Our <span className="consultation_span">consultation</span> is
                                 </span>
