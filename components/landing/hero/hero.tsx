@@ -193,7 +193,7 @@ const HeroMain = () => {
                         </span>
                         <div className="flex items-center gap-8">
                             <div className="amazing_div1 h-72 flex pb-8 p-4 items-start justify-end gap-4 flex-col">
-                                <span className="technical md:text-3xl text-xl">Technical Analysis</span>
+                                <span className="technical md:text-3xl text-xl ">Technical Analysis</span>
                                 <div className="technical_div">
                                     <span>There are many variations of passages of Lorem</span>
                                     <span>Ipsum available, but the majority have suffered </span>
@@ -222,15 +222,15 @@ const HeroMain = () => {
                 <div className="who_are_we flex items-center justify-center">
                     <div className="who_wrapper md:flex-row flex-col-reverse flex items-start md:gap-24 gap-8 justify-center md:pl-28 md:pr-2 md:pt-24  p-8">
                         <div className="relative flex-1">
-                            <img src="/images/who/image.png" alt="" />
+                            <img src="/public/images/who/image.png" alt="" />
                             <img
                                 className="absolute  -bottom-14 right-0"
-                                src="/images/who/image 3.png"
+                                src="/public/images/who/image 3.png"
                                 alt=""
                             />
                             <img
                                 className="absolute top-0"
-                                src="/images/who/Abstract.png"
+                                src="/public/images/who/Abstract.png"
                                 alt=""
                             />
                         </div>
