@@ -53,14 +53,14 @@ export default function Slider() {
           </div>{" "}
         </SwiperSlide>
         <SwiperSlide>
-          <div className="md:flex hidden flex-col gap-4">
+          <div className="md:flex  flex-col gap-4">
             <img src="/images/team/image.png" alt="" />
             <span className="span_name">Robert C. Simmons</span>
             <span className="consultant">Business Consultant</span>
           </div>{" "}
         </SwiperSlide>
         <SwiperSlide>
-          <div className="md:flex hidden flex-col gap-4">
+          <div className="md:flex flex-col gap-4">
             <img src="/images/team/image 2.png" alt="" />
             <span className="span_name">Christopher L. Wagner</span>
             <span className="consultant">Senior Manager</span>
