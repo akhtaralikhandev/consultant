@@ -224,7 +224,7 @@ const HeroMain = () => {
                         <div className="relative flex-1">
                             <img
                                 className=""
-                                src="/images/about/Rectangle 2.png"
+                                src="/images/about/Image.png"
                                 alt=""
                             />
 
