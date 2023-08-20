@@ -385,3 +385,9 @@
   height: 100vh;
   color: white;
 }
+@media screen and (max-width: 600px) {
+  .amazing_div2 {
+    height: 300px;
+    width: 300px;
+  }
+}
