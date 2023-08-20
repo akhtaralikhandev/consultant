@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Slider from '../hero/slider/slider'
 import "./hero.css";
 // padding to se+ctions md:pl-28 md:pr-28 p-4
 const HeroMain = () => {
@@ -310,7 +311,7 @@ const HeroMain = () => {
                     </div>
                 </div>
                 <div className="team">
-                    <div className="teamWrapper flex flex-col items-center justify-center md:p-28 md:pl-28 md:pr-28 md:gap-24 p-6  pl-6 pr-6">
+                    <div className="teamWrapper overflow-hidden flex flex-col items-center justify-center md:p-28 md:pl-28 md:pr-28 md:gap-24 p-6  pl-6 pr-6">
                         <div className="flex flex-col items-center gap-4 md:gap-8 justify-center">
                             <span className="meet_our">Meet Our Team</span>
                             <span className="experience md:text-5xl text-2xl">
@@ -318,7 +319,7 @@ const HeroMain = () => {
                             </span>
                         </div>
                         <div className="flex items-center  justify-center md:gap-8">
-                            <div className="md:flex hidden flex-col gap-4">
+                            {/* <div className="md:flex hidden flex-col gap-4">
                                 <img src="/images/team/image.png" alt="" />
                                 <span className="span_name">Robert C. Simmons</span>
                                 <span className="consultant">Business Consultant</span>
@@ -332,7 +333,8 @@ const HeroMain = () => {
                                 <img src="/images/team/image 3.png" alt="" />
                                 <span className="span_name">Lawrence C. Dickerson</span>
                                 <span className="consultant">Financial Consultant</span>
-                            </div>
+                            </div> */}
+                            <Slider />
                         </div>
                     </div>
                 </div>
