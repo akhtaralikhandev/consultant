@@ -222,7 +222,11 @@ const HeroMain = () => {
                 <div className="who_are_we flex items-center justify-center">
                     <div className="who_wrapper md:flex-row flex-col-reverse flex items-start md:gap-24 gap-8 justify-center md:pl-28 md:pr-2 md:pt-24  p-8">
                         <div className="relative flex-1">
-                            <img src="/images/about/Rectangle 3.png" alt="" />
+                            <img
+                                className=""
+                                src="/images/about/Rectangle 2.png"
+                                alt=""
+                            />
 
                             <img
                                 className="absolute  -bottom-14 right-0"
