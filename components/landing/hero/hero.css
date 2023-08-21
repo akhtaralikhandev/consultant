@@ -401,3 +401,13 @@
     width: 300px;
   }
 }
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: red;
+  z-index: 10;
+  transform-origin: 0%;
+}

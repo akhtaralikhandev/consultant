@@ -1,9 +1,13 @@
 "use client";
 import { useState } from "react";
 import Slider from '../hero/slider/slider'
+import { motion, useScroll } from "framer-motion"
+
 import "./hero.css";
 // padding to se+ctions md:pl-28 md:pr-28 p-4
 const HeroMain = () => {
+    const { scrollYProgress } = useScroll();
+
     const [width, setWidth] = useState("0%");
     const toggle = () => {
         if (width === "100%") {
@@ -15,6 +19,10 @@ const HeroMain = () => {
     return (
         <div className="heroMain">
             <div className="heroMainWarpper">
+                <motion.div
+                    className="progress-bar"
+                    style={{ scaleX: scrollYProgress }}
+                />
                 <div className="navbar">
                     <div className="navbarWrapper md:pl-28 md:pr-28 md:p-4 pl-6 pr-6 2 flex items-center justify-between">
                         <div className="navbar_logo">
