@@ -418,7 +418,7 @@ const HeroMain = () => {
                                     alt=""
                                     className="logo_footer"
                                 />
-                                <div className="flex flex-col footer_award_winning ">
+                                <div className="flex flex-col ">
                                     <span>2021 Award winning Vaccination</span>
                                     <span>and Lorem ipsum dolor sit amet</span>
                                 </div>
