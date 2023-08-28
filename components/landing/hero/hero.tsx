@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Slider from '../hero/slider/slider'
 import { motion, useScroll } from "framer-motion"
-
+import Typewriter from 'typewriter-effect';
 import "./hero.css";
 // padding to se+ctions md:pl-28 md:pr-28 p-4
 const HeroMain = () => {
@@ -75,6 +75,39 @@ const HeroMain = () => {
                     <div className="heroMainSectionWrapper flex items-center justify-between md:pl-28 md:pr-28 md:p-8 md:pt-28 pl-6 pr-6 p-4">
                         <div className=" flex flex-1 flex-col gap-8">
                             <div className="flex flex-col xl:text-6xl lg:text-4xl md:text-3xl text-xl sm:text-xl heroMainLeft">
+                                {/* <Typewriter
+
+                                    options={{
+
+                                        strings: [`<span>
+                                    Our <span className= "consultation_span">consultation</span> is
+                                </span>
+                                <span>always in sync</span>
+                                <span>with your strategy</span>`],
+                                        autoStart: true,
+                                        delay: 100,
+                                        loop: false,
+
+                                    }}
+                                /> */}
+                                {/* <Typewriter
+                                    onInit={(typewriter) => {
+                                        typewriter.typeString(`<span>
+                                    Our <span className= "consultation_span">consultation</span> is
+                                </span>
+                                <span>always in sync</span>
+                                <span>with your strategy</span>`)
+                                            .callFunction(() => {
+                                                console.log('String typed out!');
+                                            })
+                                            // .pauseFor(2500)
+                                            .deleteAll()
+                                            .callFunction(() => {
+                                                console.log('All strings were deleted');
+                                            })
+                                            .start();
+                                    }}
+                                /> */}
                                 <span>
                                     Our <span className="consultation_span">consultation</span> is
                                 </span>
@@ -385,7 +418,7 @@ const HeroMain = () => {
                                     alt=""
                                     className="logo_footer"
                                 />
-                                <div className="flex flex-col">
+                                <div className="flex flex-col footer_award_winning ">
                                     <span>2021 Award winning Vaccination</span>
                                     <span>and Lorem ipsum dolor sit amet</span>
                                 </div>

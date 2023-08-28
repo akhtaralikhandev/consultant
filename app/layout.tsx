@@ -1,5 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import { motion, useScroll } from "framer-motion"
 // import { Inter } from 'next/font/google'
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -20,6 +21,9 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' />
         <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&family=Poppins:ital,wght@0,200;0,300;1,100&family=Red+Hat+Display&display=swap" rel="stylesheet" />
       </head>
       <body>{children}</body>
     </html>

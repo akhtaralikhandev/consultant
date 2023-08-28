@@ -411,3 +411,11 @@
   z-index: 10;
   transform-origin: 0%;
 }
+.footer_award_winning {
+  color: #000;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 25.2px */
+}
