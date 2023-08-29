@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Slider from '../hero/slider/slider'
 import { motion, useScroll } from "framer-motion"
 import Typewriter from 'typewriter-effect';
@@ -7,8 +7,12 @@ import "./hero.css";
 // padding to se+ctions md:pl-28 md:pr-28 p-4
 const HeroMain = () => {
     const { scrollYProgress } = useScroll();
-
     const [width, setWidth] = useState("0%");
+    const ref = useRef(null);
+    const ref2 = useRef(null)
+    const resources = useRef(null)
+    const projects = useRef(null)
+    const contact = useRef(null)
     const toggle = () => {
         if (width === "100%") {
             setWidth("0%");
@@ -16,6 +20,21 @@ const HeroMain = () => {
             setWidth("100%");
         }
     };
+    const handleClick = () => {
+        ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+    const handleClick2 = () => {
+        ref2.current.scrollIntoView({ behavior: 'smooth' });
+    }
+    const handleClick3 = () => {
+        resources.current.scrollIntoView({ behavior: 'smooth' });
+    }
+    const handleClick4 = () => {
+        projects.current.scrollIntoView({ behavior: 'smooth' });
+    }
+    const handleClick5 = () => {
+        contact.current.scrollIntoView({ behavior: 'smooth' });
+    }
     return (
         <div className="heroMain">
             <div className="heroMainWarpper">
@@ -31,14 +50,14 @@ const HeroMain = () => {
                         <div className="navbar_middle">
                             <ul className="lg:flex hidden items-center justify-between gap-14">
                                 <li className="navbar_item_list">Home</li>
-                                <li className="navbar_item_list">About</li>
-                                <li className="navbar_item_list">Services</li>
-                                <li className="navbar_item_list">Resources</li>
-                                <li className="navbar_item_list">Projects</li>
+                                <li onClick={() => handleClick()} className="navbar_item_list">About</li>
+                                <li onClick={() => handleClick2()} className="navbar_item_list">Services</li>
+                                <li onClick={() => handleClick3()} className="navbar_item_list">Resources</li>
+                                <li onClick={() => handleClick4()} className="navbar_item_list">Projects</li>
                             </ul>
                         </div>
                         <div className="navbar_right lg:flex hidden">
-                            <button className="navbar_right_button rounded-md md:pl-5 md:pr-5 p-4">
+                            <button onClick={() => handleClick5()} className="navbar_right_button rounded-md md:pl-5 md:pr-5 p-4">
                                 Contact us today
                             </button>
                         </div>
@@ -54,11 +73,11 @@ const HeroMain = () => {
                         >
                             <ul className="flex pl-8 p-4 flex-col  gap-2">
                                 <li className="text-white cursor-pointer">Home</li>
-                                <li className="text-white cursor-pointer">About</li>
-                                <li className="text-white cursor-pointer">Services</li>
-                                <li className="text-white cursor-pointer">Resources</li>
-                                <li className="text-white cursor-pointer">Projects</li>
-                                <button className="navbar_right_button rounded-md md:pl-5 md:pr-5 p-2">
+                                <li onClick={() => handleClick()} className="text-white cursor-pointer">About</li>
+                                <li onClick={() => handleClick2()} className="text-white cursor-pointer">Services</li>
+                                <li onClick={() => handleClick3()} className="text-white cursor-pointer">Resources</li>
+                                <li onClick={() => handleClick4()} className="text-white cursor-pointer">Projects</li>
+                                <button onClick={() => handleClick5()} className="navbar_right_button rounded-md md:pl-5 md:pr-5 p-2">
                                     Contact us today
                                 </button>
                                 <li
@@ -190,7 +209,7 @@ const HeroMain = () => {
                         </div>
                     </div>
                 </div>
-                <div className="about">
+                <div ref={ref} className="about">
                     <div className="aboutWrapper flex lg:flex-row  flex-col-reverse   gap-8 md:pl-28 md:pr-28 md:p-8 md:pt-28 pl-6 pr-6 p-4">
                         <div className="flex items-center flex-1 gap-4 relative">
                             <img
@@ -226,7 +245,7 @@ const HeroMain = () => {
                         </div>
                     </div>
                 </div>
-                <div className="amazing">
+                <div ref={ref2} className="amazing">
                     <div className="amazingWrapper flex flex-col items-center justify-center md:gap-8 gap-4 md:pl-28 md:pr-28 p-8 md:pt-28 pl-6 pr-6 md:p-24">
                         <span className="amazing_span">Our Services</span>
                         <span className="amazing_spann md:text-5xl text-2xl ">
@@ -260,7 +279,7 @@ const HeroMain = () => {
                         </div>
                     </div>
                 </div>
-                <div className="who_are_we flex items-center justify-center">
+                <div ref={resources} className="who_are_we flex items-center justify-center">
                     <div className="who_wrapper md:flex-row flex-col-reverse flex items-start md:gap-24 gap-8 justify-center md:pl-28 md:pr-2 md:pt-24  p-8">
                         <div className="relative flex-1">
                             <img
@@ -305,7 +324,7 @@ const HeroMain = () => {
                         </div>
                     </div>
                 </div>
-                <div className="latest_projects">
+                <div ref={projects} className="latest_projects">
                     <div className="latest_projects_wrapper flex flex-col md:gap-12 pb-14 gap-4 md:pb-28 md:pt-28 pt-14 justify-center items-center">
                         <span className="our_projects">Latest Project & Case</span>
                         <span className="global_projects md:text-5xl text-3xl">
@@ -384,7 +403,7 @@ const HeroMain = () => {
                         </div>
                     </div>
                 </div>
-                <div className="newsLetter">
+                <div ref={contact} className="newsLetter">
                     <div className="newLetterWrapper md:p-28 ">
                         <div className="newsContainer md:p-28  p-4 flex sm:flex-row flex-col justify-between items-center">
                             <div className="flex flex-1 flex-col gap-4 md:gap-8">
