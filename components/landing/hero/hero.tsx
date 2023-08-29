@@ -1,19 +1,21 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Slider from '../hero/slider/slider'
 import { motion, useScroll } from "framer-motion"
-import './hero.js'
+// import './hero.js'
 import Typewriter from 'typewriter-effect';
 import "./hero.css";
 // padding to se+ctions md:pl-28 md:pr-28 p-4
 const HeroMain = () => {
     const { scrollYProgress } = useScroll();
     const [width, setWidth] = useState("0%");
-    const ref = useRef(null);
-    const ref2 = useRef(null)
-    const resources = useRef(null)
-    const projects = useRef(null)
-    const contact = useRef(null)
+    const [showButton, setShowButton] = useState(false);
+
+    const ref = useRef<HTMLInputElement>(null);
+    const ref2 = useRef<HTMLInputElement>(null)
+    const resources = useRef<HTMLInputElement>(null)
+    const projects = useRef<HTMLInputElement>(null)
+    const contact = useRef<HTMLInputElement>(null)
     const toggle = () => {
         if (width === "100%") {
             setWidth("0%");
@@ -22,20 +24,53 @@ const HeroMain = () => {
         }
     };
     const handleClick = () => {
-        ref.current.scrollIntoView({ behavior: 'smooth' });
+        if (ref.current !== null) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+
     }
     const handleClick2 = () => {
-        ref2.current.scrollIntoView({ behavior: 'smooth' });
+        if (ref2.current !== null) {
+            ref2.current.scrollIntoView({ behavior: 'smooth' });
+        }
+
     }
     const handleClick3 = () => {
-        resources.current.scrollIntoView({ behavior: 'smooth' });
+        if (resources.current !== null) {
+            resources.current.scrollIntoView({ behavior: 'smooth' });
+        }
+
     }
     const handleClick4 = () => {
-        projects.current.scrollIntoView({ behavior: 'smooth' });
+        if (projects.current !== null) {
+            projects.current.scrollIntoView({ behavior: 'smooth' });
+        }
+
     }
     const handleClick5 = () => {
-        contact.current.scrollIntoView({ behavior: 'smooth' });
+        if (contact.current !== null) {
+            contact.current.scrollIntoView({ behavior: 'smooth' });
+        }
+
     }
+    const handleScroll = () => {
+        if (window.scrollY > 200) {
+            setShowButton(true);
+        } else {
+            setShowButton(false);
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <div className="heroMain">
             <div className="heroMainWarpper">
@@ -428,8 +463,8 @@ const HeroMain = () => {
                         </div>
                     </div>
                 </div>
-                <button id="scrollButton"
-                    className="h-14 w-14 bg-blue-500 fixed bottom-10 right-10 flex items-center justify-center rounded-full ">
+                <button onClick={() => scrollToTop()} id="scrollButton"
+                    className={`h-14 w-14 bg-blue-500 rounded-full  z-10 fixed bottom-10 right-10 flex items-center justify-center rounded-full${showButton ? 'flex' : 'hidden'} `}>
                     <i className="fa fa-arrow-up text-white" aria-hidden="true"></i>
                 </button>
                 <div className="footer">
