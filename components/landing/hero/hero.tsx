@@ -2,6 +2,7 @@
 import { useState, useRef } from "react";
 import Slider from '../hero/slider/slider'
 import { motion, useScroll } from "framer-motion"
+import './hero.js'
 import Typewriter from 'typewriter-effect';
 import "./hero.css";
 // padding to se+ctions md:pl-28 md:pr-28 p-4
@@ -427,6 +428,10 @@ const HeroMain = () => {
                         </div>
                     </div>
                 </div>
+                <button id="scrollButton"
+                    className="h-14 w-14 bg-blue-500 fixed bottom-10 right-10 flex items-center justify-center rounded-full ">
+                    <i className="fa fa-arrow-up text-white" aria-hidden="true"></i>
+                </button>
                 <div className="footer">
                     <div className="footerWrapper md:flex-row flex-col  flex items-center justify-center md:gap-28  md:pl-28 md:pr-28 md:p-8 md:pt-28 pl-6 gap-8 pr-6 p-4">
                         <div className="flex items-center gap-8 md:gap-28">

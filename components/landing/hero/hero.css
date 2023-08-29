@@ -17,7 +17,7 @@
   cursor: pointer;
 }
 .navbar_item_list:hover {
-  text-decoration: underline red;
+  text-decoration: underline gray;
 }
 .navbar_logo {
   cursor: pointer;
